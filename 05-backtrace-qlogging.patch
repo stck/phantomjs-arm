@@ -1,0 +1,12 @@
+diff --git a/src/corelib/global/qlogging.cpp b/src/corelib/global/qlogging.cpp
+index fca8656f..8d0f4f6e 100644
+--- a/src/corelib/global/qlogging.cpp
++++ b/src/corelib/global/qlogging.cpp
+@@ -86,6 +86,7 @@
+ #    define QLOGGING_HAVE_BACKTRACE
+ #  endif
+ #endif
++#undef QLOGGING_HAVE_BACKTRACE
+ 
+ #if defined(QT_USE_SLOG2)
+ extern char *__progname;

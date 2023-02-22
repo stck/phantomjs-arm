@@ -1,0 +1,6 @@
+.github
+.idea
+*.patch
+*.h
+*.md
+*.iml
