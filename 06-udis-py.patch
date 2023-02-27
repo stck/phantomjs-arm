@@ -1,0 +1,15 @@
+diff --git a/Source/JavaScriptCore/disassembler/udis86/ud_opcode.py b/Source/JavaScriptCore/disassembler/udis86/ud_opcode.py
+index f8273806..946c565c 100644
+--- a/Source/JavaScriptCore/disassembler/udis86/ud_opcode.py
++++ b/Source/JavaScriptCore/disassembler/udis86/ud_opcode.py
+@@ -117,8 +117,8 @@ class UdOpcodeTables:
+             # (16, 32, 64) => (00, 01, 02)
+             '/o'     : lambda v: "%02x" % (int(v) / 32),
+             '/a'     : lambda v: "%02x" % (int(v) / 32),
+-            '/m'     : lambda v: "%02x" % (int(v) / 32),
+-            '/sse'   : lambda v: UdOpcodeTables.OpcExtIndex['sse'][v]
++            '/m'     : lambda v: 1 if v == '64' else 0,
++	    '/sse'   : lambda v: UdOpcodeTables.OpcExtIndex['sse'][v]
+         }
+ 
+         def __init__(self, prefixes, mnemonic, opcodes, operands, vendor):
