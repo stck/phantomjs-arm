@@ -56,5 +56,5 @@ RUN echo "Install deps..." && \
 #   Check PhantomJS
     cd /tmp/phantomjs/bin && ldd phantomjs && ./phantomjs --version && mv phantomjs /usr/bin/phantomjs && \
 #   Cleanup
-    rm -rf *.patch *.h *.apk *.tar.gz icu-release* openssl* phantomjs && \
+    cd /tmp && rm -rf *.patch *.h *.apk *.tar.gz icu-release* openssl* phantomjs && \
     apk del build-dependencies;
